@@ -1,0 +1,28 @@
+
+:root {
+  --bg-color: #111827;
+  --text-color: #f1f5f9;
+  --accent-color: #10b981;
+  --secondary-color: #1f2937;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+}
+.nav-link {
+  color: var(--text-color);
+}
+.nav-link:hover {
+  color: var(--accent-color);
+}
+footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 2rem;
+}
