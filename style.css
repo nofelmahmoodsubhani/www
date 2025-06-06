@@ -1,28 +1,92 @@
-
 :root {
-  --bg-color: #111827;
-  --text-color: #f1f5f9;
-  --accent-color: #10b981;
-  --secondary-color: #1f2937;
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --highlight: #0d6efd;
+  --btn-color: #0d6efd;
 }
+
 body {
-  background: var(--bg-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
 }
+
 .navbar {
-  background-color: var(--secondary-color);
-  padding: 1rem 2rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-.nav-link {
+.navbar .nav-link,
+.navbar .navbar-brand {
   color: var(--text-color);
 }
-.nav-link:hover {
-  color: var(--accent-color);
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--highlight);
+  border-bottom: 2px solid var(--highlight);
 }
-footer {
-  background-color: var(--secondary-color);
+
+.intro-section {
+  padding: 100px 15px;
+  position: relative;
+}
+.highlight {
+  color: var(--highlight);
+}
+.btn-contact {
+  background-color: var(--btn-color);
+  color: #fff;
+  padding: 10px 30px;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s;
+}
+.btn-contact:hover {
+  background-color: var(--highlight);
+}
+
+.profile-img-rect {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: 6px solid var(--btn-color);
+  box-shadow: 0 0 25px rgba(13,110,253,0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.profile-img-rect:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(13,110,253,0.7);
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 15px;
   color: var(--text-color);
-  text-align: center;
-  padding: 2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: var(--highlight);
+}
+section {
+  padding: 100px 0;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+.feature-card {
+  border-radius: 20px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(13,110,253,0.3);
 }
